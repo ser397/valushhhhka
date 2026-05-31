@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фотогалерея</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Inter,Arial,sans-serif;
+background:linear-gradient(135deg,#eef2ff,#f8fafc);
+padding:40px;
+color:#1f2937
+}
+.hero{
+max-width:1000px;
+margin:0 auto 30px auto;
+background:white;
+padding:30px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.08)
+}
+.gallery{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:24px
+}
+.card{
+background:white;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.25s
+}
+.card:hover{transform:translateY(-4px)}
+img{display:block;width:100%}
+.editable{
+padding:14px;
+outline:none
+}
+.caption{
+margin:14px;
+background:#f8fafc;
+border-radius:12px;
+min-height:44px
+}
+
+body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
+h1{text-align:center}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:white;border-radius:12px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+img{width:100%;height:auto;border-radius:8px}
+.caption{margin-top:10px;padding:8px;border:1px dashed #bbb;border-radius:6px;min-height:24px}
+.caption:focus{outline:none;border-color:#666}
+.note{text-align:center;color:#666;margin-bottom:20px}
+</style>
+</head>
+<body>
+<div class="hero"><h1 contenteditable="true" class="editable">Сайт "ОТВАЛИ"</h1>
+<p class="note editable" contenteditable="true">В разработке.</p></div><div class="gallery">
+
+<div class="card">
+  <img src="валя/photo_2026-04-03_11-28-13.jpg" alt="Фото">
+  <div class="caption" contenteditable="true">Славянские корни</div>
+</div>
+
+<div class="card">
+  <img src="валя/photo_2026-04-06_00-02-45.jpg" alt="Фото">
+  <div class="caption" contenteditable="true">Тут на зиверт похожа (ну или она на тебя)</div>
+</div>
+
+<div class="card">
+  <img src="валя/photo_2026-04-26_15-42-19.jpg" alt="Фото">
+  <div class="caption" contenteditable="true">Ути пути какме миленькие</div>
+</div>
+
+<div class="card">
+  <img src="валя/photo_2026-05-09_21-26-54.jpg" alt="Фото">
+  <div class="caption" contenteditable="true">Эстетично</div>
+</div>
+
+<div class="card">
+  <img src="валя/photo_2026-05-31_22-40-46.jpg" alt="Фото">
+  <div class="caption" contenteditable="true">Танцы да танцы</div>
+</div>
+
+<div class="card">
+  <img src="валя/Снимок экрана 2026-05-31 224244.png" alt="Фото">
+  <div class="caption" contenteditable="true">Ну и куда же без скромнейшего, умнейшего, красивейшего меня</div>
+</div>
+
+</div>
+</body>
+</html>
+<script>
+document.querySelectorAll('h1,p,.caption').forEach(el=>{
+  el.setAttribute('contenteditable','true');
+  el.classList.add('editable');
+});
+</script>
